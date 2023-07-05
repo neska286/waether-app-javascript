@@ -16,6 +16,7 @@ async function getWeather(cityName) {
   if (resp.status == 404) {
     error.style.display = "block";
     weather.style.display = "none";
+    searchBox.value = " "
   } else {
     const data = await resp.json();
 
@@ -37,6 +38,7 @@ async function getWeather(cityName) {
     }
     weather.style.display = "block";
     error.style.display = "none";
+    searchBox.value = " "
   }
 }
 searchBtn.addEventListener("click", (eo) => {
